@@ -60,7 +60,6 @@ const deleteChatHandler = async(chatID) => {
      from-[#241224]/30 to-[#000000]/30 border-r border-[#80609F]/30 backdrop-blur-3xl transition-all duration-500 max-md:absolute 
      left-0 z-1  ${!isMenuOpen && "max-md:-translate-x-full"} `}
     >
-    
       <img
         src={theme == "light" ? assets.logo_full : assets.logo_full_dark}
         alt=""

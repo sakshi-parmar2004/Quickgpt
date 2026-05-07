@@ -9,7 +9,6 @@ import axios from "axios";
 export const textController = async (req, res) => {
     const userId = req.user.id;
     const { chatID, prompt } = req.body;
-
     try {
         // 1. check chat ownership
         // console.log( "chat id and prompt",chatID,prompt);
@@ -53,10 +52,7 @@ export const textController = async (req, res) => {
              VALUES ($1, false, false, 'assistant', $2, NOW())`,
             [chatID, replyText]
         );
-
-        // 5. return response
-       
-
+    // 5. return response
     } catch (error) {
         console.error(error);
         res.status(500).json({

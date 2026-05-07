@@ -1,9 +1,11 @@
 import OpenAI from "openai";
+import dotenv from "dotenv";
 
+dotenv.config();
 
-console.log("This is the api key yo," ,  process.env.GEMINI_API_KEY);
+// console.log("This is the api key yo," ,  process.env.GEMINI_API_KEY);
 export const openai = new OpenAI({
-    apiKey:"AIzaSyCwcT8ZBZlZJaj1O2PpxURayEEI9FbXUsE",
+    apiKey:process.env.GEMINI_API_KEY,
     baseURL:"https://generativelanguage.googleapis.com/v1beta/openai/"
 });
 

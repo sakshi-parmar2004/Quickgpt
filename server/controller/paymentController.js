@@ -22,7 +22,7 @@ const options = {
 
 export const payment_verification = async (req,res)=>
 {
-  // console.log(" request body" ,req.body);
+    // console.log(" request body" ,req.body);
     const {  razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
     const body = razorpay_order_id + "|" + razorpay_payment_id;
     const secret = process.env.RAZORPAY_SECRET;
