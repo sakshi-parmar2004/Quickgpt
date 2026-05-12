@@ -29,9 +29,9 @@ export const instance = new Razorpay({
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}`);
+// });
 app.get('/api-key', (req, res) => {
     res.send({ success: true, key: process.env.RAZORPAY_KEY });
 });
@@ -40,3 +40,5 @@ app.use('/api/payment',paymentRouter);
 app.use('/api/chats' , chatRouter);
 app.use('/api/message',messageRouter)
 connectDB();
+
+export default app;
