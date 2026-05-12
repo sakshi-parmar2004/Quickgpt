@@ -68,7 +68,8 @@ const deleteChatHandler = async(chatID) => {
       {/* {new chat search button } */}
       <button
         className="w-full py-2 px-4 rounded-md bg-blue-500 hover:bg-blue-600 text-white font-semibold text-center cursor-pointer"
-        onClick={() => createChat()}
+        onClick={() => {createChat()
+        navigate('/');}}
       >
         <span  >+ New Chat</span>
       </button>

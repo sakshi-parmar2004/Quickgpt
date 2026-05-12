@@ -63,7 +63,7 @@ const Login = () => {
       
   return (
     <>
-      { !isLoggedIn && pathname === '/login' && (
+      { !isLoggedIn  && (
         <div className='w-full h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#241224]/30 to-[#000000]/30'>
           <h1 className='text-2xl font-bold text-white mb-4'>Login</h1>
           <form className='bg-white/10 p-6 rounded-md'
